@@ -24,7 +24,7 @@ def scrape_api(country):
 
     # Convert data into year:population format
     population = list()
-    population_map = dict()
+    population_map = dict()  # NOTE: We only really need this map as an in-memory substitute for a DB backend
     for item in population_data:
         population.append({"year": item["date"], "total_pop": item["value"]})
         population_map[item["date"]] = item["value"]
